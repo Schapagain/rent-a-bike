@@ -15,7 +15,7 @@ function getRandomCode(size) {
  * Return server address considering production status
  */
 function getServerURL() {
-    const production = 'https://cafe-rio.herokuapp.com';
+    const production = 'https://ride-a-bike.herokuapp.com';
     const development = 'http://localhost:5000';
     return process.env.NODE_ENV ? production : development;
 }

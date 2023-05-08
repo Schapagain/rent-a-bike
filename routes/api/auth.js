@@ -9,7 +9,7 @@ const {
 } = require("../../controllers/auth");
 const rootEndpoint =
   process.env.NODE_ENV === "production"
-    ? "https://cafe-rio.netlify.app"
+    ? "https://ride-a-bike.netlify.app"
     : "http://localhost:3000";
 const appAddress = rootEndpoint;
 
@@ -23,7 +23,6 @@ const appAddress = rootEndpoint;
  * @param   {callback} middleware - Handle HTTP response
  */
 router.get("/activate/:activationCode", async (req, res) => {
-  console.log('activating::',req.params)
   try {
     await activateAccount(req.params.activationCode);
     res.redirect(appAddress);

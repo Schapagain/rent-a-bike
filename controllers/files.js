@@ -5,7 +5,7 @@ const cloudinary = require('cloudinary').v2;
 
 const uploadOptions = {
     use_filename: false,
-    folder: 'cafe-rio',
+    folder: 'ride-a-bike',
 }
 
 /**

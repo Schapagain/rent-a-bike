@@ -1,7 +1,7 @@
 {
-  "name": "cafe-rio",
+  "name": "rent-a-bike",
   "version": "1.0.0",
-  "description": "An office cafeteria solution",
+  "description": "A web store for a bike rental company",
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
