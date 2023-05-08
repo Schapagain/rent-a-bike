@@ -19,7 +19,6 @@ const {
  */
 async function signupUser(user) {
   try {
-    console.log("signinig up:", user);
     checkIdCardPresence(user);
     user = trimPrematureIds(user);
     user = await saveUserIdCard(user);

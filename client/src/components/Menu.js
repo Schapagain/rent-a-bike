@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Bikes from "./Bikes";
-import { a, useTransition, config } from "react-spring";
 import Button from "./Button";
 import { MenuItem, OutlinedInput, Select, Slider } from "@material-ui/core";
 import { connect } from "react-redux";
@@ -57,7 +56,6 @@ const FilterPanel = ({ onChange }) => {
   }
   const handleApply = () => {
     if (onChange) {
-      console.log('sending filterrs...',filters);
       onChange(filters);
     }
   }

@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 
 import SingleBike from "./SingleBike";
 import { addBikeToOrder } from "../actions/orderActions";
-import { getBikes } from '../actions/bikeActions';
 import Skeleton from "@material-ui/lab/Skeleton";
 import { MdUnfoldMore } from "react-icons/md";
 import Button from "./Button";
@@ -22,9 +21,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Bikes = ({ bike, filter, addBikeToOrder, getBikes }) => {
+const Bikes = ({ bike, filter, addBikeToOrder }) => {
   let { bikes, isLoading } = bike;
-  console.log(bikes.length,isLoading);
   const [numDisplayed, setNumDisplayed] = useState(MAX_DISPLAY_COUNT_DEFAULT);
  
   const muiClasses = useStyles();
@@ -72,4 +70,4 @@ const mapStateToProps = (state) => ({
   order: state.order.order,
 });
 
-export default connect(mapStateToProps, { addBikeToOrder, getBikes })(Bikes);
+export default connect(mapStateToProps, { addBikeToOrder })(Bikes);

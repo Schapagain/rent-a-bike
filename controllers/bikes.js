@@ -125,7 +125,6 @@ async function getBikes(
         }
       });
     }
-    console.log(query);
     bikes = await Bike.find(query);
   } else {
     bikes = [await checkBikePresence({ id })];

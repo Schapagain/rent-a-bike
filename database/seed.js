@@ -183,9 +183,7 @@ module.exports = async function() {
     const bikes = await Bike.find({});
     if (bikes.length > 0) return;
 
-    console.log('database seeding started...')
     const seedBikes = injectFeatures(mockData);
     await Bike.deleteMany({});
     await Bike.insertMany(seedBikes);
-    console.log('seeded database...');
 }

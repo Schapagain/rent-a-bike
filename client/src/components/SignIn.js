@@ -27,7 +27,6 @@ const SignIn = ({
   const [msg, setMsg] = useState("");
   const [errorFlag, setErrorFlag] = useState("ERROR");
 
-  console.log(msg, errorFlag);
   useEffect(() => {
     if (checkoutFail) {
       setErrorFlag("WARNING");

@@ -13,7 +13,6 @@ const Arrow = ({className}) => (<svg className={className} stroke="currentColor"
 function BikeInfo({ bike, getBikeInfo }) {
     const { id } = useParams();
     const { selectedBike } = bike;
-    console.log(selectedBike);
     const history = useHistory();
     useEffect(() => {
         getBikeInfo(id)
